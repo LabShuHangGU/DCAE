@@ -405,7 +405,7 @@ def main(argv):
         [transforms.CenterCrop(args.patch_size), transforms.ToTensor()]
     )
 
-    train_dataset = ImageFolder(args.dataset, split="test", transform=train_transforms)
+    train_dataset = ImageFolder(args.dataset, split="train", transform=train_transforms)
     test_dataset = ImageFolder(args.dataset, split="test", transform=test_transforms)
 
     if args.local_rank != -1:
